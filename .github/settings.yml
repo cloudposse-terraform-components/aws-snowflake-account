@@ -2,7 +2,7 @@
 _extends: .github
 repository:
   name: aws-snowflake-account
-  description: This component sets up the requirements for all other Snowflake components, including creating the Terraform service user
+  description: "This component sets up the requirements for all other Snowflake components, including creating the Terraform service user"
   homepage: https://cloudposse.com/accelerate
   topics: terraform, terraform-component
 
