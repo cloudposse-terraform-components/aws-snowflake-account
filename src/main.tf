@@ -146,7 +146,7 @@ resource "snowflake_role_grants" "grant_custom_roles" {
 
 module "ssm_parameters" {
   source  = "cloudposse/ssm-parameter-store/aws"
-  version = "0.9.1"
+  version = "0.13.0"
 
   parameter_write = [
     {
