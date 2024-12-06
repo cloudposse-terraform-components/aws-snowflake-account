@@ -20,7 +20,7 @@ locals {
 
 module "utils" {
   source  = "cloudposse/utils/aws"
-  version = "0.8.1"
+  version = "1.4.0"
   context = module.introspection.context
 }
 
