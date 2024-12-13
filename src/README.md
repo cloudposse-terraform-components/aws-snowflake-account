@@ -6,7 +6,7 @@ tags:
   - provider/snowflake
 ---
 
-# Component: `snowflake`
+# Component: `snowflake-account`
 
 This component sets up the requirements for all other Snowflake components, including creating the Terraform service
 user. Before running this component, follow the manual, Click-Ops steps below to create a Snowflake subscription.
