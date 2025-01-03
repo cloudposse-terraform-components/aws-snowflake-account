@@ -39,7 +39,7 @@ user. Before running this component, follow the manual, Click-Ops steps below to
 5. Click "Continue to Subscribe"
 
 6. Fill out the information steps using the following as an example. Note, the provided email cannot use labels such as
-   `mdev+sbx01@example.com`.
+  `mdev+sbx01@example.com`.
 
 ```
   First Name: John
@@ -50,9 +50,9 @@ user. Before running this component, follow the manual, Click-Ops steps below to
 ```
 
 7. Select "Standard" and the current region. In this example, we chose "US East (Ohio)" which is the same as
-   `us-east-1`.
+  `us-east-1`.
 8. Continue and wait for Sign Up to complete. Note the Snowflake account ID; you can find this in the newly accessible
-   Snowflake console in the top right of the window.
+  Snowflake console in the top right of the window.
 9. Check for the Account Activation email. Note, this may be collected in a Slack notifications channel for easy access.
 10. Follow the given link to create the Admin user with username `admin` and a strong password. Be sure to save that
     password somewhere secure.
