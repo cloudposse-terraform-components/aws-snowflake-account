@@ -5,3 +5,4 @@ repository:
   description: "This component sets up the requirements for all other Snowflake components, including creating the Terraform service user"
   homepage: https://cloudposse.com/accelerate
   topics: terraform, terraform-component
+
