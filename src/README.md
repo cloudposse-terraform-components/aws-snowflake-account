@@ -100,13 +100,13 @@ components:
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_account"></a> [account](#module\_account) | cloudposse/stack-config/yaml//modules/remote-state | 1.5.0 |
+| <a name="module_account"></a> [account](#module\_account) | cloudposse/stack-config/yaml//modules/remote-state | 1.8.0 |
 | <a name="module_iam_roles"></a> [iam\_roles](#module\_iam\_roles) | ../account-map/modules/iam-roles | n/a |
 | <a name="module_introspection"></a> [introspection](#module\_introspection) | cloudposse/label/null | 0.25.0 |
 | <a name="module_snowflake_account"></a> [snowflake\_account](#module\_snowflake\_account) | cloudposse/label/null | 0.25.0 |
 | <a name="module_snowflake_role"></a> [snowflake\_role](#module\_snowflake\_role) | cloudposse/label/null | 0.25.0 |
 | <a name="module_snowflake_warehouse"></a> [snowflake\_warehouse](#module\_snowflake\_warehouse) | cloudposse/label/null | 0.25.0 |
-| <a name="module_ssm_parameters"></a> [ssm\_parameters](#module\_ssm\_parameters) | cloudposse/ssm-parameter-store/aws | 0.9.1 |
+| <a name="module_ssm_parameters"></a> [ssm\_parameters](#module\_ssm\_parameters) | cloudposse/ssm-parameter-store/aws | 0.13.0 |
 | <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
 | <a name="module_utils"></a> [utils](#module\_utils) | cloudposse/utils/aws | 0.8.1 |
 
