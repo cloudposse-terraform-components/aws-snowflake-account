@@ -132,7 +132,7 @@ components:
 | <a name="module_snowflake_account"></a> [snowflake\_account](#module\_snowflake\_account) | cloudposse/label/null | 0.25.0 |
 | <a name="module_snowflake_role"></a> [snowflake\_role](#module\_snowflake\_role) | cloudposse/label/null | 0.25.0 |
 | <a name="module_snowflake_warehouse"></a> [snowflake\_warehouse](#module\_snowflake\_warehouse) | cloudposse/label/null | 0.25.0 |
-| <a name="module_ssm_parameters"></a> [ssm\_parameters](#module\_ssm\_parameters) | cloudposse/ssm-parameter-store/aws | 0.9.1 |
+| <a name="module_ssm_parameters"></a> [ssm\_parameters](#module\_ssm\_parameters) | cloudposse/ssm-parameter-store/aws | 0.13.0 |
 | <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
 | <a name="module_utils"></a> [utils](#module\_utils) | cloudposse/utils/aws | 0.8.1 |
 
