@@ -47,6 +47,13 @@ description: |-
   atmos terraform deploy snowflake/account --stack $TENANT-use2-sbx01
   ```
 
+  ## Migrate `chanzuckerberg/snowflake` to `snowflakedb/snowflake` provider
+  5/25/2022 the provider has been transferred from the Chan Zuckerberg Initiative (CZI) GitHub organization to snowflakedb org.
+  To upgrade from CZI, please run the following command:
+  ```shell
+  terraform state replace-provider chanzuckerberg/snowflake snowflakedb/snowflake
+  ```
+
   ## Usage
 
   **Stack Level**: Regional
