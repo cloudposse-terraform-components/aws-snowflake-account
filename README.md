@@ -71,6 +71,13 @@ AWS_PROFILE=$NAMESPACE-$TENANT-gbl-sbx01-admin chamber write /snowflake/$ACCOUNT
 atmos terraform deploy snowflake/account --stack $TENANT-use2-sbx01
 ```
 
+## Migrate `chanzuckerberg/snowflake` to `snowflakedb/snowflake` provider
+5/25/2022 the provider has been transferred from the Chan Zuckerberg Initiative (CZI) GitHub organization to snowflakedb org.
+To upgrade from CZI, please run the following command:
+```shell
+terraform state replace-provider chanzuckerberg/snowflake snowflakedb/snowflake
+```
+
 ## Usage
 
 **Stack Level**: Regional
@@ -101,7 +108,7 @@ components:
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.0 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.0, < 6.0.0 |
 | <a name="requirement_random"></a> [random](#requirement\_random) | >= 2.3 |
 | <a name="requirement_snowflake"></a> [snowflake](#requirement\_snowflake) | >= 0.25 |
 | <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 3.0 |
@@ -110,7 +117,7 @@ components:
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.0, < 6.0.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | >= 2.3 |
 | <a name="provider_snowflake"></a> [snowflake](#provider\_snowflake) | >= 0.25 |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | >= 3.0 |
@@ -134,11 +141,11 @@ components:
 | Name | Type |
 |------|------|
 | [random_password.terraform_user_password](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password) | resource |
-| [snowflake_role.terraform](https://registry.terraform.io/providers/chanzuckerberg/snowflake/latest/docs/resources/role) | resource |
-| [snowflake_role_grants.grant_custom_roles](https://registry.terraform.io/providers/chanzuckerberg/snowflake/latest/docs/resources/role_grants) | resource |
-| [snowflake_role_grants.grant_system_roles](https://registry.terraform.io/providers/chanzuckerberg/snowflake/latest/docs/resources/role_grants) | resource |
-| [snowflake_user.terraform](https://registry.terraform.io/providers/chanzuckerberg/snowflake/latest/docs/resources/user) | resource |
-| [snowflake_warehouse.default](https://registry.terraform.io/providers/chanzuckerberg/snowflake/latest/docs/resources/warehouse) | resource |
+| [snowflake_role.terraform](https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs/resources/role) | resource |
+| [snowflake_role_grants.grant_custom_roles](https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs/resources/role_grants) | resource |
+| [snowflake_role_grants.grant_system_roles](https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs/resources/role_grants) | resource |
+| [snowflake_user.terraform](https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs/resources/user) | resource |
+| [snowflake_warehouse.default](https://registry.terraform.io/providers/snowflakedb/snowflake/latest/docs/resources/warehouse) | resource |
 | [tls_private_key.terraform_user_key](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key) | resource |
 | [aws_ssm_parameter.snowflake_password](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ssm_parameter) | data source |
 
