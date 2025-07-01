@@ -7,7 +7,7 @@ terraform {
       version = ">= 3.0, < 6.0.0"
     }
     snowflake = {
-      source  = "chanzuckerberg/snowflake"
+      source  = "snowflakedb/snowflake"
       version = ">= 0.25"
     }
     tls = {
