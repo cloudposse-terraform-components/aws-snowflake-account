@@ -52,6 +52,12 @@ AWS_PROFILE=$NAMESPACE-$TENANT-gbl-sbx01-admin chamber write /snowflake/$ACCOUNT
 atmos terraform deploy snowflake/account --stack $TENANT-use2-sbx01
 ```
 
+## Migrate `chanzuckerberg/snowflake` to `snowflakedb/snowflake` provider
+5/25/2022 the provider has been transferred from the Chan Zuckerberg Initiative (CZI) GitHub organization to snowflakedb org.
+To upgrade from CZI, please run the following command:
+```shell
+terraform state replace-provider chanzuckerberg/snowflake snowflakedb/snowflake
+```
 ## Usage
 
 **Stack Level**: Regional
@@ -76,7 +82,10 @@ components:
 ```
 
 <!-- prettier-ignore-start -->
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- prettier-ignore-end -->
+
+
+<!-- markdownlint-disable -->
 ## Requirements
 
 | Name | Version |
@@ -170,7 +179,17 @@ components:
 | <a name="output_snowflake_terraform_role"></a> [snowflake\_terraform\_role](#output\_snowflake\_terraform\_role) | The name of the role given to the Terraform service user. |
 | <a name="output_ssm_path_terraform_user_name"></a> [ssm\_path\_terraform\_user\_name](#output\_ssm\_path\_terraform\_user\_name) | The path to the SSM parameter for the Terraform user name. |
 | <a name="output_ssm_path_terraform_user_private_key"></a> [ssm\_path\_terraform\_user\_private\_key](#output\_ssm\_path\_terraform\_user\_private\_key) | The path to the SSM parameter for the Terraform user private key. |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-<!-- prettier-ignore-end -->
+<!-- markdownlint-restore -->
+
+
+
+## References
+
+
+- [chamber](https://github.com/segmentio/chamber) - 
+
+
+
 
 [<img src="https://cloudposse.com/logo-300x69.svg" height="32" align="right"/>](https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=cloudposse-terraform-components/aws-snowflake-account&utm_content=)
+
