@@ -3,7 +3,7 @@ locals {
   # tflint-ignore: terraform_unused_declarations
   check_required_tags = module.this.enabled ? [
     for k in var.required_tags :
-    lookup(module.this.tags, k)
+    module.this.tags[k]
   ] : []
 }
 

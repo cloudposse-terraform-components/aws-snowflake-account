@@ -29,7 +29,7 @@ module "snowflake_account" {
   version = "0.25.0"
 
   # Change to use the Snowflake region, typically the same as the given stack
-  environment = lookup(module.utils.region_az_alt_code_maps["to_short"], var.snowflake_account_region)
+  environment = module.utils.region_az_alt_code_maps["to_short"][var.snowflake_account_region]
 
   context = module.introspection.context
 }
@@ -40,7 +40,7 @@ module "snowflake_warehouse" {
   version = "0.25.0"
 
   # Change to use the Snowflake region, typically the same as the given stack
-  environment = lookup(module.utils.region_az_alt_code_maps["to_short"], var.snowflake_account_region)
+  environment = module.utils.region_az_alt_code_maps["to_short"][var.snowflake_account_region]
 
   attributes = ["default", "wh"]
 
@@ -104,7 +104,7 @@ module "snowflake_role" {
   source  = "cloudposse/label/null"
   version = "0.25.0"
 
-  environment      = lookup(module.utils.region_az_alt_code_maps["to_short"], var.snowflake_account_region)
+  environment      = module.utils.region_az_alt_code_maps["to_short"][var.snowflake_account_region]
   attributes       = ["terraform", "role"]
   delimiter        = ""
   label_value_case = "title"
@@ -128,7 +128,7 @@ resource "snowflake_role_grants" "grant_system_roles" {
   # Snowflake resource names are enclosed in quotes intentionally per Idenitier Requirements:
   # https://docs.snowflake.com/en/sql-reference/identifiers-syntax.html#identifier-requirements
   roles = [
-    "${snowflake_role.terraform[0].name}",
+    snowflake_role.terraform[0].name,
   ]
 }
 
@@ -140,7 +140,7 @@ resource "snowflake_role_grants" "grant_custom_roles" {
   # Snowflake resource names are enclosed in quotes intentionally per Idenitier Requirements:
   # https://docs.snowflake.com/en/sql-reference/identifiers-syntax.html#identifier-requirements
   users = [
-    "${snowflake_user.terraform[0].name}",
+    snowflake_user.terraform[0].name,
   ]
 }
 
